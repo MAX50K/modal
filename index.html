@@ -21,7 +21,26 @@
     <button class="btn-open" data-modal-open>Відкрити</button>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="btn" data-modal-close>Закрити</button>
+                <button class="btn" data-modal-close>
+                    <svg class="close__icon">
+                        <use href="./icons/symbol-defs.svg#icon-X"></use>
+                    </svg>
+                </button>
+                <h1 class="modal__title">Reach out to us!</h1>
+                <form class="form__list">
+                    <label for="">
+                        <p>Your name</p>
+                        <input type="name">
+                    </label>
+                    <label for="">
+                        <p>Your email</p>
+                        <input type="email">
+                    </label>
+                    <label for="">
+                        <textarea name="message" id="" cols="30" rows="5">   Leave a message</textarea>
+                    </label>
+                </form>
+                <button></button>
                 <p>.....</p>
             </div>
         </div>
