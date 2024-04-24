@@ -18,39 +18,63 @@
 </head>
 
 <body>
-<main>
-    <section class="hero">
-        <img class="hero__left-img" src="./img/BAAUHAUHAUh.jpg" alt="">
-        <img class="hero__left-img" src="./img/.jpg" alt="">
-        <button class="btn-open" data-modal-open>Відкрити</button>
-    </section>
-</main>
-    
-    
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <button class="btn" data-modal-close>
-                    <svg class="close__icon">
-                        <use href="./icons/symbol-defs.svg#icon-X"></use>
-                    </svg>
-                </button>
-                <h1 class="modal__title">Reach out to us!</h1>
-                <form class="form__list">
-                    <label for="">
-                        <p>Your name</p>
-                        <input type="name">
-                    </label>
-                    <label for="">
-                        <p>Your email</p>
-                        <input type="email">
-                    </label>
-                    <label for="">
-                        <textarea name="message" id="" cols="30" rows="5">   Leave a message</textarea>
-                    </label>
-                </form>
-                <button></button>
-                <p>.....</p>
+    <header class="header">
+        <ul class="header__list">
+            <li class="header__item">
+                <a href="" class="header__link current">home</a>
+            </li>
+            <li class="header__item">
+                <a href="#about" class="header__link">about</a>
+            </li>
+            <li class="header__item">
+                <a href="#projects" class="header__link">projects</a>
+            </li>
+            <li class="header__item">
+                <a href="#contacts" class="header__link">contact</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="hero">
+                <div class="hero__left__thumb hero__thumb">
+                    <img class="hero__left-img" src="./img/BAAUHAUHAUh.jpg" alt="">
+                </div>
+            
+
+
+            <div class="hero__right__thumb hero__thumb">
+                <img class="hero__right-img" src="./img/hamsterbutsad.jpg" alt="">
             </div>
+            <button class="btn-open" data-modal-open>Відкрити</button>
+        </section>
+        <section class="section" id="about"></section>
+        <section class="section" id="projects"></section>
+        <section class="section" id="contacts"></section>
+    </main>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn" data-modal-close>
+                <svg class="close__icon">
+                    <use href="./icons/symbol-defs.svg#icon-X"></use>
+                </svg>
+            </button>
+            <h1 class="modal__title">Reach out to us!</h1>
+            <form class="form__list">
+                <label class="form__button" for="">
+                    <p>Your name</p>
+                    <input type="name">
+                </label>
+                <label class="form__button" for="">
+                    <p>Your email</p>
+                    <input type="email">
+                </label>
+                <label class="form__button" for="">
+                    <textarea name="message" placeholder="Leave a message" cols="30" rows="5"></textarea>
+                </label>
+            </form>
+            <button></button>
+            <p>.....</p>
         </div>
-        <script src="./modal.js"></script>
+    </div>
+    <script src="./modal.js"></script>
 </body>
