@@ -1,3 +1,15 @@
+
+
+
+.hero{
+    height: 100vh;
+    background-image: url(https://content.imageresizer.com/images/memes/what-da-dog-meme-10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+
 .btn-open {
 }
 .backdrop {
