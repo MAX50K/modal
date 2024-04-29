@@ -104,6 +104,38 @@
 
 #about{
     background-color: aqua;
+    position: relative;
+}
+
+.slide__menu {
+  display: flex;
+  background-color: grey;
+  width: 50vw;
+  height: 500px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  transform: translateX(-95%);
+  transition: all 400ms ease-in-out;
+}
+
+.slide__menu:hover{
+  transform: translateX(0);
+}
+
+.slide__menu:hover .slide__menu__title{
+  display: none;
+}
+
+.slide__menu__title {
+  writing-mode: vertical-rl;
+}
+
+.slide__menu__list {
+}
+
+.slide__menu__item {
 }
 
 #projects{
