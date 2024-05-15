@@ -1,24 +1,44 @@
-.body{
-    scroll-behavior: smooth;
+:root{
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: #fff;
-    color: black;
-    padding: 20px 50px;
+.body {
+  scroll-behavior: smooth;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  color: black;
+  padding: 20px 50px;
+}
 
+.header__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  border-radius: 2px;
+  margin-top: 10px;
+  transform: scale(0);
+  transform-origin: center right;
+  transition: transform var(--animation), transform-origin var(--animation);
+}
 
-.header__list{
-    display: flex;
-    gap: 50px;
+.header__link:hover::after{
+  transform: scale(1);
+  transform-origin: center left;
+}
+
+.header__list {
+  display: flex;
+  gap: 50px;
 }
 
 .section__text {
@@ -35,23 +55,12 @@
   top: 2000px;
 }
 
-.section__link{
+.section__link {
   position: absolute;
   color: black;
   font-size: 20px;
   padding-left: 10px;
 }
-
-.current::after{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: red;
-  border-radius: 2px;
-  margin-top: 15px;
-}
-
 
 .hero {
   position: relative;
@@ -64,10 +73,10 @@
 }
 
 .hero__thumb {
-    border: 3px solid #f6912f;
-    position: absolute;
-    border-radius: 20px;
-    overflow: hidden;
+  border: 3px solid #f6912f;
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .hero__left__thumb {
@@ -99,12 +108,12 @@
 }
 
 .section {
-    height: 100vh;
+  height: 100vh;
 }
 
-#about{
-    background-color: aqua;
-    position: relative;
+#about {
+  background-color: aqua;
+  position: relative;
 }
 
 .slide__menu {
@@ -120,11 +129,11 @@
   transition: all 400ms ease-in-out;
 }
 
-.slide__menu:hover{
+.slide__menu:hover {
   transform: translateX(0);
 }
 
-.slide__menu:hover .slide__menu__title{
+.slide__menu:hover .slide__menu__title {
   display: none;
 }
 
@@ -138,29 +147,29 @@
 .slide__menu__item {
 }
 
-#projects{
-    background-color: blueviolet;
+#projects {
+  background-color: blueviolet;
 }
 
-#contacts{
-    background-color: firebrick;
+#contacts {
+  background-color: firebrick;
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: grey;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
 }
 
-.overlay__text{
-    color: #fff;
+.overlay__text {
+  color: #fff;
 }
 
-.card{
-    position: relative;
+.card {
+  position: relative;
 }
 
 .btn-open {
@@ -172,6 +181,9 @@
   letter-spacing: 3%;
   text-align: center;
   background-color: gold;
+  position: absolute;
+  top: 70px;
+  left: 80px;
 }
 .backdrop {
   position: fixed;
@@ -209,14 +221,14 @@
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .btn:hover,
